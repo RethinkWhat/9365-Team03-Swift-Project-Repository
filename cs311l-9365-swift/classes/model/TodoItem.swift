@@ -10,30 +10,22 @@ import Foundation
 struct TodoItem {
     var course: Course
     var name: String
-    var description: String
-    var status: String
+    var isCompleted: Bool
     
     /**
      Constructs an object of TodoItem with user-defined values.
      */
-    init(course: Course, name: String, description: String, status: String = "To Do") {
+    init(course: Course, name: String, isCompleted: Bool = false) {
         self.course = course
         self.name = name
-        self.description = description
-        self.status = status
-        
+        self.isCompleted = isCompleted
     }
     
     mutating func markAsDone() {
-        status = "Done"
+        isCompleted = true
     }
     
-    mutating func markAsDoing() {
-        status = "Doing"
+    var description:String {
+        return "\(course)   \(name)   \(isCompleted)"
     }
-    
-    /*func toString() -> String {
-        return "Course: \(course.courseNumber)" + ", Task Name: \(name)" + ", Task Description: \(description)" + ", Status: \(status)"
-    }
-     */
 }
