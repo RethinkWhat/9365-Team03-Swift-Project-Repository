@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct TodoItem {
+struct TodoItem: Identifiable {
+    let id = UUID()
     var course: Course
     var name: String
     var isCompleted: Bool

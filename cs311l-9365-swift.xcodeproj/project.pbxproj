@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		510C9A992C884250000BD8BF /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C9A982C884250000BD8BF /* TodoItem.swift */; };
 		510C9A9B2C8843CD000BD8BF /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C9A9A2C8843CD000BD8BF /* Course.swift */; };
+		51F229A02C8F63B600F6F7E6 /* TodoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F2299F2C8F63B600F6F7E6 /* TodoController.swift */; };
 		641B8F8D2C8E894D00444631 /* LetterGradeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641B8F8C2C8E894D00444631 /* LetterGradeController.swift */; };
 		C31703982C843EFB00425ED4 /* cs311l_9365_swiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31703972C843EFB00425ED4 /* cs311l_9365_swiftApp.swift */; };
 		C317039A2C843EFB00425ED4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31703992C843EFB00425ED4 /* ContentView.swift */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		510C9A982C884250000BD8BF /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		510C9A9A2C8843CD000BD8BF /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		51F2299F2C8F63B600F6F7E6 /* TodoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoController.swift; sourceTree = "<group>"; };
 		641B8F8C2C8E894D00444631 /* LetterGradeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterGradeController.swift; sourceTree = "<group>"; };
 		C31703942C843EFB00425ED4 /* cs311l-9365-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cs311l-9365-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C31703972C843EFB00425ED4 /* cs311l_9365_swiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cs311l_9365_swiftApp.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			children = (
 				641B8F8C2C8E894D00444631 /* LetterGradeController.swift */,
 				C33CC56A2C8D560900A64D35 /* ScheduleController.swift */,
+				51F2299F2C8F63B600F6F7E6 /* TodoController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				C31703C52C84513C00425ED4 /* LetterGradeView.swift in Sources */,
 				641B8F8D2C8E894D00444631 /* LetterGradeController.swift in Sources */,
 				C31703C72C8451EB00425ED4 /* AbsentsView.swift in Sources */,
+				51F229A02C8F63B600F6F7E6 /* TodoController.swift in Sources */,
 				C33CC5632C8D4AC900A64D35 /* TimeRange.swift in Sources */,
 				C33CC55F2C8D407B00A64D35 /* Absent.swift in Sources */,
 				C31703982C843EFB00425ED4 /* cs311l_9365_swiftApp.swift in Sources */,

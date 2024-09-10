@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct CurrentGradeCalculatorView: View {
-    @StateObject private var controller = GradeCalculatorController()
+    //@StateObject private var controller = GradeCalculatorController()
     
     var body: some View {
         VStack {

@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct TodoView: View {
+    @State var items: [TodoItem]
+    
     var body: some View {
-        Text("TODO LIST")
+        VStack {
+            Text("Todo List")
+                .padding()
+        }
+        
+        List {
+            ForEach(items) {item in
+                Text("Todo")
+                // ListRowView(title: item)
+            }
+        }
     }
 }
 
 #Preview {
-    TodoView()
+    TodoView(items)
 }
