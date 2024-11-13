@@ -1,0 +1,68 @@
+name: CI/CD Pipeline
+
+on: 
+  push: 
+    branches: 
+      - main
+  pull_request:
+    branches: 
+      - main
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Xcode
+        run: sudo xcode-select -switch /Applications/Xcode.app
+
+      - name: Build macOS Project
+        run: |
+          xcodebuild -scheme 9365-Team03-Swift-Project-Repository -destination 'platform=macOS' build
+
+  lint:
+    runs-on: macos-latest
+    steps: 
+      - name: Checkout code 
+        uses: actions/checkout@v2 
+
+      - name: Install SwiftLint 
+        run: brew install swiftlint 
+
+      - name: Run SwiftLint 
+        run: swiftlint
+
+  artifacts: 
+    runs-on: macos-latest 
+    needs: build 
+    steps: 
+      - name: Checkout code 
+        uses: actions/checkout@v2 
+
+      - name: Upload Build Artifact 
+        uses: actions/upload-artifact@v2 
+        with: 
+          name: swift-build 
+          path: ./build
+
+  test: 
+    runs-on: macos-latest 
+    needs: build 
+    steps: 
+      - name: Checkout code 
+        uses: actions/checkout@v2 
+
+      - name: Run Tests 
+        run: |
+          xcodebuild -scheme 9365-Team03-Swift-Project-Repository -destination 'platform=macOS' test
+
+  deploy-staging: 
+    runs-on: macos-latest 
+    needs: test 
+    steps: 
+      - name: Deploy to Staging
+        run: echo "Deploying to staging environment"
+        env: 
+          APP_STORE_CONNECT_API_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY }}
